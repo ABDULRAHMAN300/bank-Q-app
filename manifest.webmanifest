@@ -1,0 +1,31 @@
+{
+ "name": "بنوك الأسئلة التفاعلية",
+ "short_name": "بنوك الأسئلة",
+ "description": "بنوك أسئلة تفاعلية للكيمياء والفيزياء والعلوم المتكاملة — إعداد أ/ عبدالرحمن يوسف",
+ "lang": "ar",
+ "dir": "rtl",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "any",
+ "background_color": "#F8F7FF",
+ "theme_color": "#6D28D9",
+ "icons": [
+  {
+   "src": "icons/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icons/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "icons/maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
