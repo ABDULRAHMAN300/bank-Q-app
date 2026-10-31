@@ -1,7 +1,7 @@
 // عامل الخدمة: يحفظ التطبيق للعمل بدون إنترنت. الإصدار يتغير مع كل بناء.
-const V='bank-50a35abdd9';
+const V='bank-570f483924';
 const ASSETS=["./", "./index.html", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/maskable-512.png", "./icons/apple-touch-icon.png", "./icons/favicon-64.png"];
-const DATA={"c11": "data/c11.bin", "c10": "data/c10.bin", "p10": "data/p10.bin", "s10": "data/s10.bin", "p11": "data/p11.bin", "c12": "data/c12.bin", "p12": "data/p12.bin"};
+const DATA={"c11": "data/c11.bin", "c10": "data/c10.bin", "p10": "data/p10.bin", "p11": "data/p11.bin", "c12": "data/c12.bin", "p12": "data/p12.bin"};
 self.addEventListener('install',e=>{e.waitUntil((async()=>{const c=await caches.open(V);await c.addAll(ASSETS.map(u=>new Request(u,{cache:'reload'})));
   // البنوك التي حمّلها الطالب سابقاً تُحمَّل نسختها الجديدة مسبقاً ليبقى التطبيق يعمل بدون إنترنت
   const had=new Set();for(const k of await caches.keys()){if(k===V)continue;const o=await caches.open(k);for(const q of await o.keys()){const m=q.url.match(/\/data\/([a-z]\d+)\./);if(m)had.add(m[1])}}
